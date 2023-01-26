@@ -1,0 +1,11 @@
+set(GRAPH_PROJECT 3)
+file(GLOB GRAPH_PROJECT_HEADERS
+        "Graph")
+file(GLOB GRAPH_PROJECT_SOURCE
+        "Graph/*.cpp")
+message("GRAPH_PROJECT_SOURCE - ${GRAPH_PROJECT_SOURCE}")
+add_executable(${GRAPH_PROJECT}_2 2.cpp ${GRAPH_PROJECT_SOURCE})
+target_include_directories(${GRAPH_PROJECT}_2 PRIVATE ${GRAPH_PROJECT_HEADERS})
+
+add_executable(${GRAPH_PROJECT}__3 3.cpp ${GRAPH_PROJECT_SOURCE})
+target_include_directories(${GRAPH_PROJECT}__3 PRIVATE ${GRAPH_PROJECT_HEADERS})
